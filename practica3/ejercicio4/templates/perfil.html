@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+</head>
+<body>
+
+    <h2>Perfil</h2>
+
+    <p>Usuario: {{perfil.nombre}}</p>
+    <p>Correo: {{perfil.correo}}</p>
+    <p>Publicaciones:</p>
+    {%for user in perfil.publicaciones%}
+    <li><strong>Contenido:</strong> {{user.contenido}} <strong>Fecha de creacion:</strong> {{user.fecha}}</li>
+    {%endfor%}
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+</head>
+<body>
+
+    <h2>Usuarios</h2>
+
+    {%for user in usuarios%}
+    <p>Usuario: {{user.nombre}}</p>
+    {%endfor%}
+    <p>Cantidad de Administradores: {{contro}}</p>
+    <p>Cantidad de usuarios activos: {{contactv}}</p>
+    {%for user in usuarios%}
+    <p>Usuario: {{user.nombre}} Numero de publicaciones: {{user.publicaciones}}</p>
+    {%endfor%}
+
+</body>
+</html>

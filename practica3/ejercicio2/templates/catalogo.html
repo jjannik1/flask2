@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogo</title>
+  <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            border: 1px solid black;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+</style>
+<body>
+
+  <h2>Catalogo de Productos</h2>
+
+  <table>
+    <tr>
+      <td>Nombre</td>
+      <td>Precio</td>
+      <td>Stock</td>
+    </tr>
+    {% for prod in catalogo %}
+    <tr>
+        <td>{{ prod.nombre }}</td>
+        <td>{{ prod.precio }}</td>
+        <td>{%if prod.stock == 0%}
+          Agotado
+
+            {%else%}
+          {{prod.stock}}
+
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+
+  </table>
+
+</body>
+</html>
